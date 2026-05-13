@@ -26,6 +26,7 @@ const submitHandler = async (e) => {
     const res = await API.post("/auth/login", {
       email: form.email,
       password: form.password,
+      type: "user"
     });
 
     localStorage.setItem("token", res.data.token);

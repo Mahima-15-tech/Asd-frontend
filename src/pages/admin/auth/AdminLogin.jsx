@@ -382,6 +382,7 @@ const handleLogin = async (e) => {
     const res = await API.post("/auth/login", {
       email,
       password,
+      type: "admin"
     });
 
     // save token

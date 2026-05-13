@@ -634,6 +634,7 @@ export default function B2BAuth() {
       const res = await API.post("/auth/login", {
         email: formData.email,
         password: formData.password,
+        type: "b2b"
       });
   
       localStorage.setItem("token", res.data.token);
